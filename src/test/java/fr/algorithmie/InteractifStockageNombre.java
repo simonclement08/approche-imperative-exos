@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class InteractifStockageNombre {
 
 	public static void main(String[] args) {
-		Scanner scanner = new Scanner(System.in) ;
+		Scanner scanner = new Scanner(System.in);
 		int choice = 0;
 		int[] userArray = {1};
 		do {
