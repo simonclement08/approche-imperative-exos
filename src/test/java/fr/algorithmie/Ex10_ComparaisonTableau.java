@@ -6,6 +6,7 @@ import org.junit.runner.RunWith;
 import outils.Exercice;
 import outils.ExerciceRunner;
 import outils.Question;
+import outils.Resultat;
 
 /**
  * Ne modifiez ni les noms des classes, ni les noms des méthodes.
@@ -27,9 +28,15 @@ public class Ex10_ComparaisonTableau {
 	@Test
 	@Question(numero = 1)
 	public void calculerElementsCommuns() {
-
-		// TODO LOGUER le nombre de valeurs communes aux 2 tableaux.
-		// Exemple : On peut déjà voir que les valeurs 3 et 8 sont communes aux 2 tableaux, mais
-		// Combien y en a t'il au total ?
+		int same = 0;
+		
+		for (int i=0; i<array1.length; i++) {
+			for (int y=0; y<array2.length; y++) {
+				if(array1[i] == array2[y]) {
+					same++;
+				}
+			}
+		}
+		Resultat.log(same);
 	}
 }
