@@ -45,7 +45,7 @@ public class ExerciceRunner extends BlockJUnit4ClassRunner  {
     public void runChild(final FrameworkMethod method, RunNotifier notifier) {
 		
 		Description description = Description.createTestDescription(getTestClass().getJavaClass(), method.getName());
-		SystemOutRule systemOutRule = new SystemOutRule().enableLog();
+		Resultat.getLogs().clear();
         if (method.getAnnotation(Ignore.class) != null) {
             notifier.fireTestIgnored(description);
         } else {
@@ -61,7 +61,7 @@ public class ExerciceRunner extends BlockJUnit4ClassRunner  {
 	        	    	System.setIn(in);
 					}
 	        		
-					RunRules runRules = new RunRules(methodBlock(method), Arrays.asList(new TestRule[]{systemOutRule}), description);
+					RunRules runRules = new RunRules(methodBlock(method), Arrays.asList(new TestRule[]{}), description);
 	        		runLeaf(runRules, description, notifier);
 	        		
 	        		Optional<Failure> optFailure = checkCode(description, getTestClass().getName(), question.numero());
