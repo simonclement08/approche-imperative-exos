@@ -10,7 +10,7 @@ public class InteractifStockageNombre {
 		int choice = 0;
 		int[] userArray = {1};
 		do {
-			System.out.println("Veuiller choisir une option : \n1) Ajouter un nombre\n2) Afficher les nombres existants\n3) Arrêter le programme");
+			System.out.println("Veuillez choisir une option : \n1) Ajouter un nombre\n2) Afficher les nombres existants\n3) Arrêter le programme");
 			System.out.print ( "Selection: " );
 			choice = scanner.nextInt();
 			

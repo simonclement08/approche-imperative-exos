@@ -9,7 +9,7 @@ public class InteractifFibonacci {
 		Scanner scanner = new Scanner(System.in);
 		int rang = 0;
 		do {
-			System.out.println("Veuiller choisir un rang :");
+			System.out.println("Veuillez choisir un rang :");
 			rang = scanner.nextInt();
 		} while(rang < 0);
 		
