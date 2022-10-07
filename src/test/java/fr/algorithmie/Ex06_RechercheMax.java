@@ -6,6 +6,7 @@ import org.junit.runner.RunWith;
 import outils.Exercice;
 import outils.ExerciceRunner;
 import outils.Question;
+import outils.Resultat;
 
 /** Ne modifiez ni les noms des classes, ni les noms des méthodes.
  * Utilisez Resultat.log pour afficher les résultats
@@ -25,9 +26,13 @@ public class Ex06_RechercheMax {
 	@Test
 	@Question(numero=1)
 	public void rechercherMax() {
-		
-		//TODO Grâce à un algorithme, recherchez le maximum du tableau et LOGUEZ le.
-		
+		int max = array[0];
+		for (int i=0; i<array.length; i++) {
+			if(array[i] > max) {
+				max = array[i];
+			}
+		}
+		Resultat.log(max);
 	}
 
 }
