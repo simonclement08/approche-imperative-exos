@@ -6,6 +6,7 @@ import org.junit.runner.RunWith;
 import outils.Exercice;
 import outils.ExerciceRunner;
 import outils.Question;
+import outils.Resultat;
 
 /** Ne modifiez ni les noms des classes, ni les noms des méthodes.
  * Utilisez Resultat.log pour afficher les résultats
@@ -22,11 +23,11 @@ public class Ex05_InversionContenu {
 	@Test
 	@Question(numero=1)
 	public void affichageTableauArrayCopy() {
+		int[] arrayCopy = new int[array.length];
 		
-		// TODO Créer un tableau nommé arrayCopy et qui contient les mêmes nombres
-		// que dans le tableau array mais dans l'ordre inverse. 
-		// Pour être plus précis, arrayCopy commence par les nombres suivants : -4, 14, 0, etc..
-		
-		// TODO LOGUER le contenu de ce tableau arrayCopy
+		for (int i=0; i<array.length; i++) {
+			arrayCopy[i] = array[array.length-i-1];
+			Resultat.log(arrayCopy[i]);
+		}
 	}
 }
